@@ -9,39 +9,33 @@ abstract class Instrument {
 	
 	public abstract void play(Note n);
 	
-	public String what() {
-		
+	public String what() {		
 		return "Instrument";
-	}
+	}	
 	
-	public abstract void adjust();
-	
+	public abstract void adjust();	
 }
 
 class Wind extends Instrument {
 	
-	public void play(Note n) {
-		
+	public void play(Note n) {		
 		System.out.println("Wind.play() " + n);
-	}
+	}	
 	
-	public String what() {
-		
+	public String what() {		
 		return "Wind";
-	}
+	}	
 	
 	public void adjust() {}
 }
 
 class Percussion extends Instrument {
 	
-	public void play(Note n) {
-		
+	public void play(Note n) {		
 		System.out.println("Percussion.play() " + n);
 	}
 	
-	public String what() {
-		
+	public String what() {		
 		return "Percussion";
 	}
 	
@@ -50,13 +44,11 @@ class Percussion extends Instrument {
 
 class Stringed extends Instrument {
 	
-	public void play(Note n) {
-		
+	public void play(Note n) {		
 		System.out.println("Stringed.play() " + n);
 	}
 	
-	public String what() {
-		
+	public String what() {		
 		return "Stringed";
 	}
 	
@@ -65,34 +57,29 @@ class Stringed extends Instrument {
 
 class Brass extends Wind {
 	
-	public void play(Note n) {
-		
+	public void play(Note n) {		
 		System.out.println("Brass.play() " + n);
 	}
 	
-	public void adjust() {
-		
+	public void adjust() {		
 		System.out.println("Brass.adjust()");
 	}
 }
 
 class Woodwind extends Wind {
 	
-	public void play(Note n) {
-		
+	public void play(Note n) {		
 		System.out.println("Woodwind.play() " + n);
 	}
 	
-	public String what() {
-		
+	public String what() {		
 		return "Woodwind";
 	}
 }
 
 public class Music4 {
 	
-	static void tune(Instrument i) {
-		
+	static void tune(Instrument i) {		
 		i.play(Note.MIDDLE_C);
 	}
 	
@@ -101,17 +88,14 @@ public class Music4 {
 			tune(i);
 	}
 	
-	public static void main(String[] args) {
-		
-		Instrument[] orchestra = {
-			
+	public static void main(String[] args) {	
+		Instrument[] orchestra = {		
 			new Wind(),
 			new Percussion(),
 			new Stringed(),
 			new Brass(),
 			new Woodwind()
-		};
-		
+		};		
 		tuneAll(orchestra);
 	}
 }
